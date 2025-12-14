@@ -31,6 +31,7 @@ temp_input.jpg
 .vscode/     # VS Code 设置 (如果不需要共享)
 .idea/       # PyCharm 设置
 .DS_Store    # macOS 文件
+.idea/
 
 # -------------------------------------
 # 必要的依赖文件
