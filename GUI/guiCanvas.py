@@ -7,17 +7,14 @@ from PyQt5.QtCore import Qt, QPoint
 class PaintBoard(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.setFixedSize(280, 280)  # 画板大小 (28x28 的 10倍)
+        self.setFixedSize(280, 280)
         self.setStyleSheet("background-color: white; border: 1px solid black;")
 
-        # 初始化画布
         self.image = QImage(self.size(), QImage.Format_RGB32)
-        self.image.fill(Qt.white)  # 白底
+        self.image.fill(Qt.white)
 
         self.last_point = QPoint()
         self.drawing = False
-
-        # 画笔设置 (黑色，宽度20，圆头)
         self.pen = QPen(Qt.black, 20, Qt.SolidLine, Qt.RoundCap, Qt.RoundJoin)
 
     def paintEvent(self, event):
