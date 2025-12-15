@@ -63,7 +63,7 @@ pip install -r requirements.txt
 下载 MNIST 数据集并将其处理为 NumPy 格式。
 ```bash
 # 1. 下载原始图片数据
-python scripts/download_mnist_to_folders.py
+python download_mnist_to_folders.py
 
 # 2. 处理并保存为 .npz 文件
 python scripts/processData.py
