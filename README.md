@@ -66,6 +66,7 @@ pip install -r requirements.txt
 python download_mnist_to_folders.py
 
 # 2. 处理并保存为 .npz 文件
+cd scripts
 python scripts/processData.py
 ```
 **第二步：模型训练 (Model Training)**
@@ -74,9 +75,11 @@ python scripts/processData.py
 
 ```bash
 # 训练 SVM 模型
+cd scripts
 python scripts/trainSVM.py
 
 # 训练 CNN 模型 (默认 10 轮)
+cd scripts
 python scripts/trainCNN.py
 ```
 
@@ -85,6 +88,7 @@ python scripts/trainCNN.py
 运行此脚本以生成混淆矩阵图片和评估报告。 
 >注意： 如果跳过此步，GUI 中的“查看评估”功能将无法显示图片。
 ```bash
+cd scripts
 python scripts/generateCharts.py
 ```
 
