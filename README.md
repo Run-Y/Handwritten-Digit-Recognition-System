@@ -54,6 +54,7 @@ source .venv/bin/activate
 ### 3. 安装依赖库
 ```bash
 pip install -r requirements.txt
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
 ## ⚡ 使用流程 (Usage Workflow)
 >为了确保系统正常运行，请务必按照以下顺序执行脚本：
