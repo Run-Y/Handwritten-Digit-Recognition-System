@@ -14,7 +14,7 @@ save_dir = 'rawDataset'
 
 
 def save_images(dataset, prefix):
-    print(f"正在转换 {prefix} 数据...")
+    print(f"Converting {prefix} data...")
     for i, (img, label) in enumerate(dataset):
         # 创建对应的数字文件夹，例如 raw_dataset/0/
         folder = os.path.join(save_dir, str(label))
@@ -27,9 +27,9 @@ def save_images(dataset, prefix):
         cv2.imwrite(os.path.join(folder, filename), img_np)
 
 
-# 执行转换
+
 save_images(train_data, "train")
 save_images(test_data, "test")
 
-print(f"\n搞定！那4个复杂的文件已经被转换成了 {save_dir} 文件夹里的 .jpg 图片。")
-print("你现在可以去文件夹里直接查看这些图片了。")
+print(f"\nDone! Those four complex files have been converted into .jpg images in the {save_dir} folder.")
+print("You can now view these images directly in the folder.")
